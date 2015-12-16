@@ -1,11 +1,11 @@
 # ---------------------------------------------------------------------- #
-# Script generated with: DeZign for Databases V9.0.0                     #
+# Script generated with: DeZign for Databases V9.1.0                     #
 # Target DBMS:           MySQL 5                                         #
-# Project file:          Project1_ora_proj JOW.dez                       #
+# Project file:          Project1.dez                                    #
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database drop script                            #
-# Created on:            2015-11-23 19:40                                #
+# Created on:            2015-12-16 16:26                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -13,60 +13,58 @@
 # Drop foreign key constraints                                           #
 # ---------------------------------------------------------------------- #
 
-ALTER TABLE `EMPLOYEE` DROP FOREIGN KEY `DEP_EMPLOYEE`;
+ALTER TABLE `Computer` DROP FOREIGN KEY `ComputerType_Computer`;
 
-ALTER TABLE `EMPLOYEE` DROP FOREIGN KEY `PROJWORK_EMPLOYEE`;
+ALTER TABLE `Computer` DROP FOREIGN KEY `Manufacturer_Computer`;
 
-ALTER TABLE `EMPLOYEE` DROP FOREIGN KEY `DETAIL_EMPLOYEE`;
+ALTER TABLE `ComputerUser` DROP FOREIGN KEY `User_ComputerUser`;
 
-ALTER TABLE `PROJWORK` DROP FOREIGN KEY `PROJECT_PROJWORK`;
-
-# ---------------------------------------------------------------------- #
-# Drop table "EMPLOYEE"                                                  #
-# ---------------------------------------------------------------------- #
-
-# Drop constraints #
-
-ALTER TABLE `EMPLOYEE` DROP PRIMARY KEY;
-
-DROP TABLE `EMPLOYEE`;
+ALTER TABLE `ComputerUser` DROP FOREIGN KEY `Computer_ComputerUser`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "DETAIL"                                                    #
+# Drop table "ComputerUser"                                              #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `DETAIL` DROP PRIMARY KEY;
+ALTER TABLE `ComputerUser` DROP PRIMARY KEY;
 
-DROP TABLE `DETAIL`;
-
-# ---------------------------------------------------------------------- #
-# Drop table "PROJWORK"                                                  #
-# ---------------------------------------------------------------------- #
-
-# Drop constraints #
-
-ALTER TABLE `PROJWORK` DROP PRIMARY KEY;
-
-DROP TABLE `PROJWORK`;
+DROP TABLE `ComputerUser`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "PROJECT"                                                   #
+# Drop table "Computer"                                                  #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `PROJECT` DROP PRIMARY KEY;
+ALTER TABLE `Computer` DROP PRIMARY KEY;
 
-DROP TABLE `PROJECT`;
+DROP TABLE `Computer`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "DEP"                                                       #
+# Drop table "User"                                                      #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `DEP` DROP PRIMARY KEY;
+ALTER TABLE `User` DROP PRIMARY KEY;
 
-DROP TABLE `DEP`;
+DROP TABLE `User`;
+
+# ---------------------------------------------------------------------- #
+# Drop table "ComputerType"                                              #
+# ---------------------------------------------------------------------- #
+
+# Drop constraints #
+
+ALTER TABLE `ComputerType` DROP PRIMARY KEY;
+
+DROP TABLE `ComputerType`;
+
+# ---------------------------------------------------------------------- #
+# Drop table "Manufacturer"                                              #
+# ---------------------------------------------------------------------- #
+
+# Drop constraints #
+
+DROP TABLE `Manufacturer`;

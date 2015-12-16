@@ -1,0 +1,19 @@
+Generate a MySQL 5 database.
+Date/time: 2015-12-16 16:26
+Database created.
+Add tables
+Add table "Manufacturer"
+Table "Manufacturer" added.
+Add table "ComputerType"
+Table "ComputerType" added.
+Add table "User"
+Table "User" added.
+Add table "Computer"
+Table "Computer" added.
+Add table "ComputerUser"
+Table "ComputerUser" added.
+Add foreign key constraints
+Constraint "Computer.ComputerType_Computer" added.
+Constraint "Computer.Manufacturer_Computer" added.
+Constraint "ComputerUser.User_ComputerUser" added.
+Constraint "ComputerUser.Computer_ComputerUser" added.
